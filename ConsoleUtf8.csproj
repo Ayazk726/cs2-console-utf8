@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <AssemblyName>ConsoleUtf8</AssemblyName>
+    <RootNamespace>ConsoleUtf8</RootNamespace>
+    <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <BaseOutputPath>build\</BaseOutputPath>
+    <OutputPath>$(BaseOutputPath)Release\</OutputPath>
+    <DebugType>embedded</DebugType>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="CounterStrikeSharp.API" Version="1.0.374">
+      <IncludeAssets>compile</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+</Project>
