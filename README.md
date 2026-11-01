@@ -2,22 +2,10 @@
 
 一个很小的 CounterStrikeSharp 插件，用来解决 **CS2 服务端控制台中文/Unicode 显示乱码** 的问题。
 
-## 为什么需要它
-
-`cs2.exe` 在 Windows 上会自己创建一个控制台窗口（`AllocConsole`），代码页默认是系统代码页：简体中文系统是 **936（GBK）**。而 CS2 引擎和 CounterStrikeSharp 输出的都是 **UTF-8**，两者对不上，中文就变成了 `鏃ュ織` 这样的乱码。
-
-本插件运行在游戏进程内部，启动时把控制台的输出/输入代码页切换为 **UTF-8 (65001)**，同时把 .NET 的 `Console.OutputEncoding` 一起同步，因此：
-
-- 引擎自己的中文/Unicode 输出正常；
-- CSS 插件日志里的中文正常；
-- 在控制台里输入中文命令也正常。
-
-不需要外部脚本、不需要额外的启动参数，也不用按端口去 attach 进程。
-
 ## 依赖
 
 - [CounterStrikeSharp](https://github.com/roflmuffin/CounterStrikeSharp)（CSS 插件框架，**必须**）
-- [Metamod:Source 2](https://www.metamodsource.net/)（CSS 的前置依赖）
+- [Metamod:Source 2](https://www.metamodsource.net/downloads.php/?branch=master)（CSS 的前置依赖）
 - 编译需要 .NET SDK（项目目标框架 `net10.0`）
 
 ## 安装
